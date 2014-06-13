@@ -1248,5 +1248,4 @@ class GsimLogicTree(object):
                 assert branch.uncertainty in self.values[fkey], \
                     branch.uncertainty  # sanity check
                 value[fkey] = branch.uncertainty
-            yield LtRealization(
-                value, None if self.num_samples else weight, tuple(lt_path))
+            yield LtRealization(value, weight, tuple(lt_path))
